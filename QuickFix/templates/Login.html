@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/static/favicon2.png">
+
+  <title>QuickFix | Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      width: 100%;
+      background-image: url('static/images/login-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(27, 10, 10, 0.6);
+
+      /* Light gray with opacity */
+      z-index: -1;
+      /* Place it behind the content */
+    }
+
+    .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26%;
+  background: rgba(237, 228, 192, 0.5); /* More transparent background */
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+    .container .registration {
+      display: none;
+    }
+
+    #check:checked~.registration {
+      display: block;
+    }
+
+    #check:checked~.login {
+      display: none;
+    }
+
+    #check {
+      display: none;
+    }
+
+    .container .form {
+      padding: 2rem;
+    }
+
+    .form header {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .form input {
+      height: 60px;
+      width: 100%;
+      padding: 0 15px;
+      font-size: 17px;
+      margin-bottom: 1.3rem;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .form input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .form a {
+      font-size: 16px;
+      color: #ca772a;
+      text-decoration: none;
+    }
+
+    .form a:hover {
+      text-decoration: underline;
+    }
+
+    .form input.button {
+      color: #fff;
+      background: rgb(164, 115, 69);
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 1.7rem;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .form input.button:hover {
+      background: #984d2a;
+    }
+
+    .signup {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .signup label {
+      color: #2b1a12;
+      cursor: pointer;
+    }
+
+    .signup label:hover {
+      text-decoration: underline;
+    }
+
+    /* Popup Overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent overlay */
+      z-index: 999;
+      /* Above other content but below the popup */
+      display: none;
+      /* Hidden by default */
+    }
+
+    /* Popup Box */
+    .animated-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border: 2px solid #ec4141;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      /* Above the overlay */
+      text-align: center;
+      width: 80%;
+      /* Responsive width */
+      max-width: 400px;
+      /* Maximum width */
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    .error-text {
+      color: rgb(236, 65, 65);
+      font-weight: bold;
+      font-size: 18px;
+      /* Adjust font size */
+      word-wrap: break-word;
+      /* Ensure text wraps within bounds */
+      margin-bottom: 10px;
+      /* Space between messages */
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .custom-danger-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      /* Adjust padding for button size */
+      font-size: 16px;
+      color: #fff;
+      background-color: #dc3545;
+      /* Red background color */
+      border: none;
+      /* Remove default border */
+      border-radius: 8px;
+      /* Rounded corners */
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      width: 150px;
+      /* Set width */
+      height: 50px;
+      /* Set height */
+      line-height: 30px;
+      /* Vertically center text */
+    }
+
+    .custom-danger-btn:hover {
+      background-color: #c82333;
+      /* Darker red for hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="login form">
+      <header style="color:#000; font-weight:700;">Login</header>
+
+      <form method="POST" action="">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Enter Email" required />
+        <input type="password" name="password" placeholder="Enter password" required>
+        <input type="submit" class="button" value="Login">
+      </form>
+
+      {% if messages %}
+      <!-- Overlay -->
+      <div class="popup-overlay"></div>
+      <!-- Popup box with slide-in animation -->
+      <div class="animated-popup">
+        {% for message in messages %}
+        <p class="error-text">⚠️{{ message }}</p>
+        {% endfor %}
+        <button type="button" class="custom-danger-btn" onclick="closePopup()">Close</button>
+      </div>
+      {% endif %}
+
+      <div class="signup">
+        <span class="signup">Don't Have an Account?<a href="{% url 'verify-mail' %}"
+            style="text-decoration: none; color: #2b1a12;"><b>Register</b></a></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to close the popup
+    function closePopup() {
+      document.querySelector('.animated-popup').style.display = 'none';
+      document.querySelector('.popup-overlay').style.display = 'none';
+    }
+
+    // Display the overlay and popup when there are messages
+    window.onload = function () {
+      if (document.querySelector('.animated-popup')) {
+        document.querySelector('.popup-overlay').style.display = 'block';
+        document.querySelector('.animated-popup').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>

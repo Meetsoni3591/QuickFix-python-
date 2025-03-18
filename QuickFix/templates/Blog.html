@@ -1,0 +1,412 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="/static/favicon2.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+		<!-- Bootstrap CSS -->
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="/static/css/tiny-slider.css" rel="stylesheet">
+		<link href="/static/css/style.css" rel="stylesheet">
+
+		   
+
+
+		<title>QuickFix | Blog </title>
+		
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="{% url 'home-page' %}"><h1>QuickFix <i class="fa fa-rocket"></h1></i></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item ">
+							<a class="nav-link" href="{% url 'home-page' %}">Home</a>
+						</li>
+						{% comment %} <li><a class="nav-link" href="{% url 'shop' %}">Shop</a></li> {% endcomment %}
+						<li><a class="nav-link" href="{% url 'about-us' %}">About us</a></li>
+						<li><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+						<li class="active"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+						<li><a class="nav-link" href="{% url 'contact-us' %}">Contact us</a></li>
+					</ul>
+
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li><a class="nav-link" href="#"><img src="/static/images/user.svg"></a></li>
+						{% comment %} <li><a class="nav-link" href="{% url 'cart' %}"><img src="/static/images/cart.svg"></a></li> {% endcomment %}
+					</ul>
+				</div>
+			</div>
+				
+		</nav>
+		<!-- End Header/Navigation -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>Blog</h1>
+								<p class="mb-4">Welcome to the QuickFix Blog, your go-to resource for all things related to home appliances and electronic services. Here, we aim to inspire and educate our readers with practical tips, expert advice, and the latest industry trends. Whether you're a DIY enthusiast, a busy homeowner, or just someone looking to stay informed, our blog has something for everyone.</p>
+								<p><a href="" class="btn btn-secondary me-2">Book Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/static/images/repair-guy.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+
+		
+<br>
+<br>
+		<!-- Start Blog Section -->
+		<div class="container-xxl py-5">
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-1.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+	
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Introduction to Home Appliance Services</h1>
+						<p class="mb-4" style="font-size: 16px">Home appliances are essential to our daily lives, but they require regular maintenance to ensure longevity and efficiency. By keeping appliances in good condition, you can avoid unexpected breakdowns and extend their lifespan. Professional services play a crucial role in this, offering expert care that not only saves time but also prevents costly repairs. On our platform, you can find a wide range of services for all your home appliance needs, from AC repair to washing machine maintenance.</p>	
+						<p class="mb-4" style="font-size: 16px">In addition to convenience, using a platform like ours connects you with vetted and experienced professionals who are well-versed in handling a variety of appliance issues. Whether it's a routine check-up or an emergency repair, our service providers are equipped with the latest tools and knowledge to address any problem efficiently. This level of expertise ensures that your appliances receive the best possible care, leading to better performance and longer life.</p>
+					</div>
+				</div>
+			</div>
+	
+			<br>
+			<hr>
+			<br>
+	
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-2.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+	
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Tips for Home Appliance Maintenance</h1>
+						<p class="mb-4" style="font-size: 16px">Maintaining your home appliances doesn't have to be complicated, but it does require consistency. Regular cleaning is key to preventing buildup and ensuring your appliances run smoothly. Scheduling timely servicing can help catch minor issues before they turn into major problems, improving both performance and energy efficiency. While DIY fixes can be tempting, knowing when to call a professional is crucial—sometimes, a quick repair can prevent more serious damage and save you money in the long run.</p>
+						<p class="mb-4" style="font-size: 16px">Furthermore, proper maintenance can also improve the safety of your home. For example, regularly inspecting and cleaning your dryer’s lint trap can prevent potential fire hazards. Ensuring that gas appliances are checked for leaks and proper ventilation is another critical safety measure. By following these maintenance tips, not only do you keep your appliances running efficiently, but you also protect your home and loved ones from avoidable risks.</p>
+
+					</div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-3.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+	
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Common Appliance Issues and Solutions</h1>
+						<p class="mb-4" style="font-size: 16px">Many common appliance issues can be easily diagnosed and fixed with the right knowledge. For instance, a refrigerator that isn't cooling properly might have a clogged condenser coil, while a washing machine that leaks could have a faulty door seal. If your AC isn't blowing cold air, it might be due to a dirty filter or low refrigerant levels. And if your oven isn't heating evenly, it could be an issue with the heating element. Knowing these common problems and their solutions can help you decide when to troubleshoot yourself and when to call in an expert.</p>
+						<p class="mb-4" style="font-size: 16px">Additionally, staying informed about common issues helps you anticipate potential problems before they disrupt your daily life. For example, recognizing early signs like unusual noises or odd smells can prompt you to seek professional help before a complete breakdown occurs. This proactive approach not only minimizes inconvenience but also reduces the likelihood of more expensive repairs or replacements, keeping your home running smoothly.</p>
+
+					</div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-5.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+	
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Choosing the Right Service Provider</h1>
+						<p class="mb-4" style="font-size: 16px">Selecting the right service provider for your home appliances is essential for quality repairs and maintenance. Credentials and certifications are important indicators of a technician's expertise, ensuring they have the necessary skills to handle your appliances. Customer reviews and ratings can also provide valuable insights into the reliability and professionalism of a service provider. Additionally, consider the service coverage and availability—choosing a provider that operates in your area and fits your schedule will make the process smoother and more convenient.</p>
+						<p class="mb-4" style="font-size: 16px">Moreover, it’s important to choose a provider who offers clear communication and transparency in their work. A trustworthy technician will not only explain the problem and the required repair but also provide an accurate estimate of costs and timelines. This transparency builds trust and ensures you’re fully informed about the service being provided. A reliable provider will also offer warranties or guarantees on their work, giving you peace of mind knowing that you’re covered if any issues arise after the service is completed.</p>
+
+					</div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-6.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+					  
+		   
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Seasonal Maintenance Tips</h1>
+						<p class="mb-4" style="font-size: 16px">Different seasons require different approaches to appliance maintenance. In the summer, it's crucial to prepare your AC, refrigerator, and fans for the increased usage, while in the winter, you should focus on maintaining heaters, water purifiers, and other winter-specific appliances. During the monsoon season, protecting appliances from moisture and humidity becomes a priority. By following seasonal maintenance tips, you can ensure that your appliances function optimally throughout the year, reducing the risk of sudden breakdowns and extending their lifespan.</p>
+						<p class="mb-4" style="font-size: 16px">Seasonal maintenance also includes making adjustments to your appliance usage habits. For example, during the colder months, you might lower the thermostat on your water heater to save energy while still maintaining comfort. In the summer, cleaning your refrigerator’s coils and ensuring proper ventilation can help it run more efficiently under the strain of higher temperatures. Adapting your maintenance routine to the seasons not only keeps your appliances in good shape but also optimizes their performance based on the time of year.</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="container">
+				<div class="row g-5 align-items-end">
+					<div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+						<img class="img-fluid rounded" data-wow-delay="0.1s" src="/static/images/Blog-Topic-7.jpg">
+					</div>
+					<div class="col-lg-9  " data-wow-delay="0.3s">
+	
+						<h1 class="display-5 mb-4" style="color: #0F4229 ">Benefits of Regular Professional Services</h1>
+						<p class="mb-4" style="font-size: 16px">Investing in regular professional services for your home appliances comes with numerous benefits. Not only can routine maintenance prolong the lifespan of your appliances, but it can also prevent major breakdowns by addressing issues before they escalate. Regular servicing can lead to significant cost savings over time, as minor repairs are often less expensive than major fixes or replacements. By keeping your appliances in top condition, you also improve their efficiency, which can result in lower energy bills and a more environmentally friendly home.</p>
+						<p class="mb-4" style="font-size: 16px">Beyond the financial and environmental benefits, regular professional servicing also enhances the overall performance of your appliances. Well-maintained appliances operate more quietly, efficiently, and reliably, contributing to a more comfortable and hassle-free living environment. Additionally, professional services often include thorough inspections that can identify potential hazards, such as gas leaks or electrical issues, ensuring your home remains safe and secure. By committing to regular maintenance, you invest in the long-term functionality and safety of your household.</p>
+					</div>
+				</div>
+			</div>
+	
+			</div> <!-- Blog End -->
+	
+		</div>
+		<!-- End Blog Section -->	
+
+		<br>
+		<br>
+		<br>
+
+
+		<!-- Start Testimonial Slider -->
+		{% comment %} <div class="testimonial-section before-footer-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 mx-auto text-center">
+						<h2 class="section-title">Testimonials</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="testimonial-slider-wrap text-center">
+
+							<div id="testimonial-nav">
+								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+							</div>
+
+							<div class="testimonial-slider">
+								
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="/static/images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="/static/images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="/static/images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> {% endcomment %}
+		<!-- End Testimonial Slider -->
+
+		
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<img src="/static/images/Open-washing-machine.png" alt="Image" class="img-fluid">
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="/static/images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a class="navbar-brand" href="{% url 'home-page' %}">QuickFix <i class="fa fa-rocket"></i></a>						</div>
+						<p class="mb-4">QuickFix is your go-to service provider for all home appliances and electronic needs. Experience hassle-free repairs and maintenance right at your doorstep.</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Knowledge base</a></li>
+									<li><a href="#">Live chat</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Our team</a></li>
+									<li><a href="#">Leadership</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Nordic Chair</a></li>
+									<li><a href="#">Kruzo Aero</a></li>
+									<li><a href="#">Ergonomic Chair</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.	  <!-- License information: https://untree.co/license/ -->
+            </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+
+		<script src="/static/js/bootstrap.bundle.min.js"></script>
+		<script src="/static/js/tiny-slider.js"></script>
+		<script src="/static/js/custom.js"></script>
+	</body>
+
+</html>

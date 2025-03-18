@@ -1,0 +1,484 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="/static/favicon2.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<!-- Bootstrap CSS -->
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="/static/css/tiny-slider.css" rel="stylesheet">
+	<link href="/static/css/style.css" rel="stylesheet">
+	<title>QuickFix | Services </title>
+<style>
+	.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0; /* Add vertical spacing */
+    transition: box-shadow 0.3s ease;  /* Smooth transition effect on hover */
+}
+
+
+.image1 .desk {
+    width: 420px;
+    height:450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.product {
+    width: 420px;
+    height:460px;
+    background-color: rgba(196, 245, 200, 0.767);
+    padding: 35px;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.product h3 {
+    color: #1a1919;
+    font-weight: bold;
+}
+
+.product p {
+    color: #808080;
+    font-weight: 500;
+    font-size: large;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product .price {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #398864;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product .old-price {
+    color: #808080;
+    text-decoration-line: line-through;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    position: flex;
+    bottom: 109px;
+    right: 70px;
+}
+
+.product .add-card {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Top margin */
+    margin-bottom: 10%; /* Bottom margin of 10% */
+    text-decoration: none;
+    background-color: #398864;
+    color: white;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 13px;
+    border-radius: 7px;
+}
+
+.product .add-card:active {
+    background-color: #1f4d37;
+}
+
+.product .add-card i {
+    padding-right: 10px;
+}
+
+/* Start Media Query */
+@media (min-width: 768px) {
+    .mob {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+
+    .image .desk {
+        display: none;
+    }
+
+    .mob {
+        width: 320px;
+        height: 250px;
+        margin-bottom: -3px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .product {
+        width: 320px;
+        height: 390px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 20px;
+    }
+
+    .product h3 {
+        width: fit-content;
+        margin-top: 15px;
+    }
+
+    .product p {
+        width: fit-content;
+        margin-top: -10px;
+    }
+
+    .product .old-price {
+        bottom: 110px;
+        right: 100px;
+    }
+
+    .product .add-card {
+        margin-top: 0px; /* Reset margin for mobile view if needed */
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'home-page' %}">
+				<h1>QuickFix <i class="fa fa-rocket"></h1></i>
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item ">
+						<a class="nav-link" href="{% url 'home-page' %}">Home</a>
+					</li>
+					{% comment %} <li><a class="nav-link" href="{% url 'shop' %}">Shop</a></li> {% endcomment %}
+					<li><a class="nav-link" href="{% url 'about-us' %}">About us</a></li>
+					<li class="active"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+					<li><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+					<li><a class="nav-link" href="{% url 'contact-us' %}">Contact us</a></li>
+				</ul>
+
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+					<li><a class="nav-link" href="#"><img src="/static/images/user.svg"></a></li>
+					{% comment %} <li><a class="nav-link" href="{% url 'cart' %}"><img
+								src="/static/images/cart.svg"></a></li> {% endcomment %}
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Services</h1>
+						<p class="mb-4">At QuickFix, we offer a comprehensive range of home appliance and electronic
+							repair services designed to meet your needs. From fixing malfunctioning appliances to
+							servicing complex electronics, our expert technicians ensure timely and efficient solutions
+							right at your doorstep. Trust us to restore the functionality of your devices with precision
+							and care, so you can get back to your routine without delay.
+
+						</p>
+						<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
+								class="btn btn-white-outline">Explore</a></p>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="hero-img-wrap">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/static/images/repair-guy.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+
+
+
+	<!-- Start Services Section -->
+	{% for item in data %}
+	<p style="visibility:hidden;">{{ item.email }}</p>
+
+	<div class="container1"> 	
+		<div class="image1">
+			<img class="desk" src="{{ item.service_image.url }}" alt="Not Found">
+		</div>
+		<img class="mob" src="https://i.postimg.cc/9FBCbNjD/image-product-mobile.jpg" alt="" />
+		<div class="product">
+			<h3>{{ item.category }}</h3>
+			<p> <b style="color: rgb(59, 41, 41) !important;">Services Covered: </b> {{ item.desc }} </p>
+			<p> <b style="color: rgb(59, 41, 41) !important;">Availability: </b>  {{ item.avilable }} </p>
+			<p> <b style="color: rgb(59, 41, 41) !important;">Coverage Area: </b>{{ item.area }} </p>
+			
+			<!-- Display the new price (with 18% margin included) -->
+			<span class="price">Price: {{ item.new_price|floatformat:2 }}</span>
+			<span class="old-price">{{ item.old_price|floatformat:2 }}</span>
+			
+			<a class="add-card" href="{% url 'book_service' item.id %}" style="font-weight: 600; font-size: large;">👨🏻‍🔧 Book Service</a>
+		</div>
+	</div>
+{% endfor %}
+
+
+	<!-- End Service Section -->
+
+
+	<!-- Start Testimonial Slider -->
+	<div class="testimonial-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 mx-auto text-center">
+					<h2 class="section-title">Testimonials</h2>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="testimonial-slider-wrap text-center">
+
+						<div id="testimonial-nav">
+							<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+							<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+						</div>
+
+						<div class="testimonial-slider">
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;"QuickFix exceeded my expectations! The technician arrived on
+													time, was extremely professional, and fixed my washing machine in no
+													time. Highly recommend their services!"&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="/static/images/testimonies-1.jpg" alt="Maria Jones"
+														class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Karan D.</h3>
+												<span class="position d-block mb-3">Software Engineer</span>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;"I was impressed by the quick response and excellent service
+													from QuickFix. The technician was knowledgeable and fixed my
+													refrigerator the same day. Will definitely use them again!"&rdquo;
+												</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="/static/images/testimonies-2.jpg" alt="Maria Jones"
+														class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Tushar M.</h3>
+												<span class="position d-block mb-3">Teacher</span>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+
+							<div class="item">
+								<div class="row justify-content-center">
+									<div class="col-lg-8 mx-auto">
+
+										<div class="testimonial-block text-center">
+											<blockquote class="mb-5">
+												<p>&ldquo;"Fantastic service! Booking was easy, and the technician was
+													friendly and efficient. My AC is working perfectly now. Thank you,
+													QuickFix!"&rdquo;</p>
+											</blockquote>
+
+											<div class="author-info">
+												<div class="author-pic">
+													<img src="/static/images/testimonies-3.jpg" alt="Maria Jones"
+														class="img-fluid">
+												</div>
+												<h3 class="font-weight-bold">Zoya R.,</h3>
+												<span class="position d-block mb-3">Chef</span>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- END item -->
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Testimonial Slider -->
+
+
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="/static/images/Open-washing-machine.png" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="subscription-form">
+						<h3 class="d-flex align-items-center"><span class="me-1"><img
+									src="/static/images/envelope-outline.svg" alt="Image"
+									class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+						<form action="#" class="row g-3">
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="Enter your name">
+							</div>
+							<div class="col-auto">
+								<input type="email" class="form-control" placeholder="Enter your email">
+							</div>
+							<div class="col-auto">
+								<button class="btn btn-primary">
+									<span class="fa fa-paper-plane"></span>
+								</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a class="navbar-brand" href="{% url 'home-page' %}">QuickFix <i
+								class="fa fa-rocket"></i></a> </div>
+					<p class="mb-4">QuickFix is your go-to service provider for all home appliances and electronic
+						needs. Experience hassle-free repairs and maintenance right at your doorstep.</p>
+
+					<ul class="list-unstyled custom-social">
+						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact us</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Knowledge base</a></li>
+								<li><a href="#">Live chat</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Our team</a></li>
+								<li><a href="#">Leadership</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Nordic Chair</a></li>
+								<li><a href="#">Kruzo Aero</a></li>
+								<li><a href="#">Ergonomic Chair</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.
+							<!-- License information: https://untree.co/license/ -->
+						</p>
+					</div>
+
+					<div class="col-lg-6 text-center text-lg-end">
+						<ul class="list-unstyled d-inline-flex ms-auto">
+							<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
+
+	<script src="/static/js/bootstrap.bundle.min.js"></script>
+	<script src="/static/js/tiny-slider.js"></script>
+	<script src="/static/js/custom.js"></script>
+</body>
+
+</html>
